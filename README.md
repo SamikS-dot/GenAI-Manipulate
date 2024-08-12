@@ -162,11 +162,37 @@ To get started with the ROS 2 simulation and control of your Panda robot, follow
    ```bash
    source ~/dev_ws/install/local_setup.bash
 
+---
+## Features
 
-### Features
+### Vision Capabilities
 
-*List of features provided by the project.*
+This project integrates advanced computer vision tools to enhance object detection and spatial understanding. The vision capabilities are essential for accurate object identification and position mapping in real-world scenarios. Below are the key vision components:
 
+1. **YOLOv8 Object Detection**  
+   YOLOv8 is a state-of-the-art object detection model that enables high-accuracy detection and classification of objects in images. We use this identify and annotate images with a comprehensive
+   image of all of the objects detected in a workspace
+
+   **Command to run YOLOv8 object detection:**  
+   ```bash
+   # Replace with your actual command for YOLOv8 object detection
+   ros2 run yolov8_node detect --input /path/to/image --output /path/to/output
+
+2. **Sensors**                                                                                                                                                                              
+   We use a rgb camera and a depth camera to identify the distance the camera is from certain objects. Using computer vision based technqiues we can then identify where the objects are in x,y,z
+   coordinates
+   ```bash
+    # Replace with your actual command for YOLOv8 object detection
+   ros2 run yolov8_node detect --input /path/to/image --output /path/to/output
+
+3. **Google Vision Cloud API**                                                                                                                                                                      Google Vision Cloud API allows us to parse text from our annotated images that are taken as a livestream from our camera. Using the information provided we can then feed information into OpenAI in order to deduce which objects should be manipulated and what actions should be taken with them. Each object is given a probability, its (u,v) camera-based coordinates and its distance from our camera.                                                                                                                                                                       
+   
+   ```bash
+    # Replace with your actual command for YOLOv8 object detection
+   ros2 run yolov8_node detect --input /path/to/image --output /path/to/output
+
+   
+   
 ### Contributing
 
 *Guidelines for contributing to the project.*
