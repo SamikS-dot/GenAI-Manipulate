@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/e1db0d14-f7c4-4e46-8c86-119dbb68d517)
+
 # GenAI Manipulation
 
 ---
