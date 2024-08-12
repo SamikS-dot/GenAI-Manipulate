@@ -1,4 +1,7 @@
-![image](https://github.com/user-attachments/assets/e1db0d14-f7c4-4e46-8c86-119dbb68d517)
+<div style="display: flex; justify-content: space-between;">
+  <img src="https://github.com/user-attachments/assets/e1db0d14-f7c4-4e46-8c86-119dbb68d517" alt="Image 1" style="width: 45%;"/>
+  <img src="https://github.com/user-attachments/assets/f6d16c54-43b4-4265-8099-f7bdd3d6e75d" alt="Image 2" style="width: 45%;"/>
+</div>
 
 # GenAI Manipulation
 
