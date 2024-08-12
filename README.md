@@ -176,20 +176,20 @@ This project integrates advanced computer vision tools to enhance object detecti
    **Command to run YOLOv8 object detection:**  
    ```bash
    # Replace with your actual command for YOLOv8 object detection
-   ros2 run yolov8_node detect --input /path/to/image --output /path/to/output
+   ros2 run robotic_arms_control camera
 
 2. **Sensors**                                                                                                                                                                              
    We use a rgb camera and a depth camera to identify the distance the camera is from certain objects. Using computer vision based technqiues we can then identify where the objects are in x,y,z
    coordinates
    ```bash
     # Replace with your actual command for YOLOv8 object detection
-   ros2 run yolov8_node detect --input /path/to/image --output /path/to/output
+   ros2 run robotic_arms_control camera_depth
 
 3. **Google Vision Cloud API**                                                                                                                                                                      Google Vision Cloud API allows us to parse text from our annotated images that are taken as a livestream from our camera. Using the information provided we can then feed information into OpenAI in order to deduce which objects should be manipulated and what actions should be taken with them. Each object is given a probability, its (u,v) camera-based coordinates and its distance from our camera.                                                                                                                                                                       
    
    ```bash
     # Replace with your actual command for YOLOv8 object detection
-   ros2 run yolov8_node detect --input /path/to/image --output /path/to/output
+   python3 cloudvision_tester.py
 
    
    
