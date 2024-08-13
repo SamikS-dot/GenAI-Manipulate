@@ -195,6 +195,48 @@ This project integrates advanced computer vision tools to enhance object detecti
     
    python3 cloudvision_tester.py
 
+### Motion Planning
+
+This project employs a variety of different techniques to ensure our robot is properly pathing to objects in a manner which will ensure proper manipulation practices:
+
+1. **Rviz Based Joint Configuration**  
+   MoveIt2 comes with a ROS2 interace in which the user is given the ability to control individual robot joint values in 
+   order to visualize what what the robot configuration looks like. Use this as a means to get familiar with Panda Robot's   
+   movement as well as gain an a base understanding for which joint values you should use to achieve your desired end- 
+   effector position
+   
+
+   **Command to run Rviz joint visualization:**  
+   ```bash
+   
+   ros2 launch robotic_arms_control rviz_bringup.launch.py
+
+   ```
+
+2. **User Robot Teleoperation**                                                                                                                                                                              
+   As an initial approach to robot teleoperation, I have developed a basic interface that enables the user to incrementally 
+   adjust individual joint positions through keypresses. While this interface is functional, it may feel somewhat 
+   unintuitive. I recommend experimenting with the Rviz-based joint configuration tool described above, as it provides a more 
+   user-friendly and visual way to understand and manipulate the robot's joints.
+   
+   coordinates
+   ```bash
+   
+   ros2 run robotic_arms_control teleop
+   ```
+   
+
+
+
+3. **Inverse Kinematic Solver**
+
+   This inverse kinematic solver plays a crucial part in our final product. The Robotics Toolbox library provides some helpful documentation for creating inverse-kinematic solvers that can find the proper joint configurations to achieve x,y,z end-effector poses. I modified the code to ensure that our end-effector remains pointed down throughout the pathing to ensure it could grip objects in proper fashion. With this code the user can specify real-world x,y,z coordinates and an action such as "rearrange" that outlines what the robot does once it achieves a specific position.                                        
+   
+   ```bash
+    
+   python3 cloudvision_tester.py
+
+   
    
    
 ### Contributing
