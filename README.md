@@ -234,7 +234,8 @@ This project employs a variety of different techniques to ensure our robot is pr
    
    ```bash
     
-   python3 cloudvision_tester.py
+   ros2 run robotic_arms_control xyzsolver {x y z action}
+   ```
 
    
    
@@ -249,7 +250,7 @@ This project employs a variety of different techniques to ensure our robot is pr
 
 ### Contact
 
-**[Your Name]**  
-**[Your Email Address]**  
+**[Samik Singh]**  
+**[imsamik@gmail.com]**  
 **[Your LinkedIn Profile]**
 
