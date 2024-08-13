@@ -291,10 +291,15 @@ This code integrates Google Cloud Vision, OpenAI's GPT-4, and ROS 2 to detect ob
 ### Acknowledgements
 
 IFRA (2022) ROS2.0 ROBOT SIMULATION. URL: https://github.com/IFRA-Cranfield/ros2_RobotSimulation
+
 noshluk2: https://github.com/noshluk2/ROS2-Ultimate-guide-for-Custom-Robotic-Arms-and-Panda-7-DOF/tree/master
+
 PicNik Robotics - MoveIt!2 Documentation
+
 Panda Robot - ROS Repository
+
 ROS2.0 Documentation - Humble
+
 Robotics Toolbox Python - https://github.com/petercorke/robotics-toolbox-python
    
 
@@ -305,7 +310,7 @@ Contributions are the heartbeat of the open-source community, fueling creativity
 
 ### License
 
-Created on behalf of Samik Sing, The University of Texas at Austin
+Created on behalf of Samik Singh, The University of Texas at Austin
 E-mail: imsamik@gmail.com
 
 Licensed under the Apache-2.0 License.
