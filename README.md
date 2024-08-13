@@ -194,6 +194,9 @@ This project integrates advanced computer vision tools to enhance object detecti
    ```bash
     
    python3 cloudvision_tester.py
+   ```
+   ![Cloud Vision Demo](output2.gif)
+   
 
 ### Motion Planning
 
@@ -212,10 +215,12 @@ This project employs a variety of different techniques to ensure our robot is pr
    ros2 launch robotic_arms_control rviz_bringup.launch.py
 
    ```
+   ![Screenshot](images/Screenshot%20from%202024-08-12%2017-39-26.png)
+
 
 2. **User Robot Teleoperation**                                                                                                                                                                              
    As an initial approach to robot teleoperation, I have developed a basic interface that enables the user to incrementally 
-   adjust individual joint positions through keypresses. While this interface is functional, it may feel somewhat 
+   adjust the x,y,z position of the end-effector. While this interface is functional, it may feel somewhat 
    unintuitive. I recommend experimenting with the Rviz-based joint configuration tool described above, as it provides a more 
    user-friendly and visual way to understand and manipulate the robot's joints.
    
@@ -224,6 +229,8 @@ This project employs a variety of different techniques to ensure our robot is pr
    
    ros2 run robotic_arms_control teleop
    ```
+
+   ![Screenshot 2](images/Screenshot%20from%202024-08-12%2018-09-46.png)
    
 
 
