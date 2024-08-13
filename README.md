@@ -279,8 +279,9 @@ This code integrates Google Cloud Vision, OpenAI's GPT-4, and ROS 2 to detect ob
     5. Teleoperation Mode: Allows manual adjustments of the arm's XYZ position using the keyboard during the execution of the trajectory.
 
     6. Attach/Detach Object: Uses service calls to attach or detach the specified object to/from the robot's gripper.
-    
-   
+
+   **Final Product**: "The man near the table is thirsty" as our example input, the code then identifes the best course of action to be picking up the bottle and placing it on the table.
+   ![Cloud Vision Demo](output3.gif)
    
 
    
