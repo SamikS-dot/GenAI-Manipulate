@@ -243,6 +243,52 @@ This project employs a variety of different techniques to ensure our robot is pr
     
    ros2 run robotic_arms_control xyzsolver {x y z action}
    ```
+---
+## Final Product
+
+### VisiontoOpenAI1, VisiontoOpenAI2
+
+This code integrates Google Cloud Vision, OpenAI's GPT-4, and ROS 2 to detect objects in an image, extract relevant information, and control a robotic arm based on user input. The users input could be any simple phrase such as "I want to make some cereal". This robot will then be able to survey the available objects and identify which action to grasp and which corresponding action to complete in order to best fulfill the user's need. VisiontoOpenAI1 takes an annotated input image which is created by taking a snapshot of the live camera feed utlizing Yolov8 object detection. It then uses Google Vision's cloud API to extract information from the image such as the camera (u,v) coordinates of the identified object, the depth, and the name of the object itself. This information is then handed off to OpenAI to determine which of the provided objects best suits the user's needs as well as which action best suits the user's needs. VisiontoOpenAI1 also uses OpenAI to calculate the real-world coordinates of the object through AI-prompting whereas VisiontoOpenAI2 uses computer vision techniques.
+
+1. **OpenAI GPT-4 Integration**  
+   YOLOv8 is a state-of-the-art object detection model that enables high-accuracy detection and classification of objects in images. We use this identify and annotate images with a comprehensive
+   image of all of the objects detected in a workspace
+
+   **Object Selection**  
+   The user provides a message describing their intent (e.g., "I want to pick up the red block"). GPT-4 is used to determine the most suitable object based on this input by selecting from the         detected objects.
+
+   **World-Coordinate Calculation**  
+   Once an object is selected, GPT-4 calculates the world coordinates of the object based on the camera's intrinsics, pose, and the object's pixel coordinates and depth. It uses a specific logic      (e.g., subtracting the depth from the camera's x-position) to derive the coordinates, ensuring accurate control of the robotic arm.
+
+   ```bash
+   ros2 run robotic_arms_control v2a
+   ros2 run robotic_arms_control v1a
+   ```
+ 2. **Hand-Off to xyz-solver interface**
+    
+    This ROS 2 Python script controls a Panda robotic arm to perform pick-and-place tasks based on provided XYZ coordinates, object name, and action ('table' or 'rearrange'). This is called to complete the motion planning handoff to complete VisiontoOpenAI program execution.
+    
+    1. Initializes ROS 2 Node: Sets up a node that can publish joint trajectories to the robot arm.
+
+    2. Parses Input Arguments: Takes command-line arguments for XYZ coordinates, the object to interact with, and the desired action.
+    
+    3. Determines Goal Positions: Calculates joint positions (q_pickup1, q_pickup2) based on the XYZ input and generates a list of goal positions for the action sequence (either 'table' or   'rearrange').
+
+    4. Publishes Trajectories: Publishes the robot arm's joint trajectories to reach the specified goals. It also attaches or detaches the specified object using ROS services.
+
+    5. Teleoperation Mode: Allows manual adjustments of the arm's XYZ position using the keyboard during the execution of the trajectory.
+
+    6. Attach/Detach Object: Uses service calls to attach or detach the specified object to/from the robot's gripper.
+    
+   
+   
+
+   
+
+
+   
+
+
 
    
    
