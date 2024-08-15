@@ -1,25 +1,8 @@
-# Ignore build and installation files
-build/
-install/
-log/
-*.log
-*.tmp
+# Exclude all directories and files except for 'src'
+/*
+!/src/
 
-# Ignore dependencies
-.vscode/
-.env
-*.pyc
-__pycache__/
-
-# Ignore system files
-.DS_Store
-*.swp
-
-# Ignore temporary files
-*.tmp
-*.bak
-
-# Ignore data files
-*.csv
-*.json
-*.xml
+# Exclude specific directories inside 'src'
+src/install/
+src/build/
+src/launch_param_builder/
