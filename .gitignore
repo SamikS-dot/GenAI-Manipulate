@@ -1,8 +1,0 @@
-# Exclude all directories and files except for 'src'
-/*
-!/src/
-
-# Exclude specific directories inside 'src'
-src/install/
-src/build/
-src/launch_param_builder/
