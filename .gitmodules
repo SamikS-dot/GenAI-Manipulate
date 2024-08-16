@@ -4,3 +4,9 @@
 [submodule "launch_param_builder"]
 	path = launch_param_builder
 	url = https://github.com/PickNikRobotics/launch_param_builder.git
+[submodule "src/IFRA_LinkAttacher"]
+	path = src/IFRA_LinkAttacher
+	url = https://github.com/IFRA-Cranfield/IFRA_LinkAttacher.git
+[submodule "src/launch_param_builder"]
+	path = src/launch_param_builder
+	url = https://github.com/PickNikRobotics/launch_param_builder.git
