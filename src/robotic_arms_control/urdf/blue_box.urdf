@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<robot name="blue_box">
+  <link name="blue_box">
+    <visual>
+      <geometry>
+        <box size="0.1 0.1 0.1"/>
+      </geometry>
+      <material name="Blue">
+        <color rgba="0 0 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.1 0.1 0.1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+      <origin xyz="0 0 0"/>
+    </inertial>
+  </link>
+
+  <joint name="fixed_joint" type="fixed">
+    <parent link="world"/>
+    <child link="blue_box"/>
+    <origin xyz="0 -0.682 0.1274" rpy="0 0 0"/>
+  </joint>
+</robot>
