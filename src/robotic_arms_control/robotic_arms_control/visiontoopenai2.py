@@ -12,7 +12,7 @@ os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = '/home/rosam/Downloads/causal-rel
 vision_client = vision.ImageAnnotatorClient()
 
 # Initialize OpenAI client
-openai.api_key = 'sk-proj-xj21c4ykB8GLPktI6Z6GT3BlbkFJteWBPGOa453T6Eee845Z'
+openai.api_key = 'Replace with your OpenAI Key'
 
 # Flask app setup
 app = Flask(__name__, template_folder='/home/rosam/new_ros2_ws/src/ROS2-Ultimate-guide-for-Custom-Robotic-Arms-and-Panda-7-DOF/robotic_arms_control/robotic_arms_control/templates')

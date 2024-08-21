@@ -8,7 +8,7 @@ import openai
 import time
 
 # Set your OpenAI API key
-openai.api_key = 'sk-proj-xj21c4ykB8GLPktI6Z6GT3BlbkFJteWBPGOa453T6Eee845Z'
+openai.api_key = 'Replace with your OpenAI Key'
 
 class TrajectoryTest(Node):
 
