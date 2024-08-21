@@ -1,0 +1,9 @@
+
+import torch
+from rt2.model import RT2
+
+# img: (batch_size, 3, 256, 256)
+# caption: (batch_size, 1024)
+
+
+

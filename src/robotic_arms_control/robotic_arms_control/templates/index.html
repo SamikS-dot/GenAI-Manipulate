@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Picker</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Basic styling for the page */
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #response { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Object Picker</h1>
+    <form id="object-form" enctype="multipart/form-data">
+        <label for="image">Upload Image:</label>
+        <input type="file" id="image" name="image" required><br><br>
+        <label for="message">Enter Message:</label>
+        <input type="text" id="message" name="message" required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="response">
+        <h2>Response:</h2>
+        <pre id="response-text"></pre>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#object-form').on('submit', function(event) {
+                event.preventDefault();
+                
+                var formData = new FormData(this);
+
+                $.ajax({
+                    url: '/process_image',
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                        $('#response-text').text(JSON.stringify(response, null, 2));
+                    },
+                    error: function(xhr, status, error) {
+                        $('#response-text').text(`Error: ${xhr.responseText}`);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
