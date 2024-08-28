@@ -4,7 +4,7 @@
 </div>
 
 
-# GenAI Manipulation
+# GenAI-Manipulate
 
 ---
 
